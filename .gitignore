@@ -2,3 +2,4 @@ venv-cyber
 .env
 CyberSecurity_Tools.egg-info
 logs-folder
+Artifacts

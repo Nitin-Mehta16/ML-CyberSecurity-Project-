@@ -1,5 +1,5 @@
 import sys 
-from NetworkSecurity.logging import logger
+from NetworkSecurity.logging.logger import logging
 
 class CustomException(Exception):
     def __init__(self,error, error_detail:sys):
@@ -19,5 +19,5 @@ class CustomException(Exception):
 #     try:
 #         a=1/0
 #     except Exception as e:
-#         logger.logging.info("Divide by zero")
+#         logging.info("Divide by zero")
 #         raise CustomException(e,sys)

@@ -6,7 +6,7 @@ import datetime as datetime
 LOG_FILE= f"{datetime.datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-print(f"ROOT_DIR: {ROOT_DIR}")
+# print(f"ROOT_DIR: {ROOT_DIR}")
 
 log_path= os.path.join(os.getcwd(),'logs-folder')
 os.makedirs(log_path,exist_ok=True)
