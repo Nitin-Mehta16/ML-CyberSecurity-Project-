@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 load_dotenv()
 logging.info("collecting  mongo url")
 mongo_url = os.getenv("MONGO_DB_URL")
-print(mongo_url)
+
 
 
 class DataIngestion:
@@ -88,8 +88,8 @@ class DataIngestion:
             data_ingestion_artifact = DataIngestionArtifact(trained_file_path=self.data_ingestion_config.training_file_path,
                                                           test_file_path = self.data_ingestion_config.testing_file_path
                                                           )
-            # return data_ingestion_artifact
-            return  self.data_ingestion_config.training_file_path,self.data_ingestion_config.testing_file_path
+            return data_ingestion_artifact
+            # return  self.data_ingestion_config.training_file_path,self.data_ingestion_config.testing_file_path
  
         except Exception as e:
             raise CustomException(e,sys)
