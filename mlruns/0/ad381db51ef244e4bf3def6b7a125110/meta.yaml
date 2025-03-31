@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/nitin/DSML/32.CyberSecurity-Project/mlruns/0/ad381db51ef244e4bf3def6b7a125110/artifacts
+end_time: 1743434450693
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ad381db51ef244e4bf3def6b7a125110
+run_name: redolent-panda-18
+run_uuid: ad381db51ef244e4bf3def6b7a125110
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743434437803
+status: 3
+tags: []
+user_id: nitin

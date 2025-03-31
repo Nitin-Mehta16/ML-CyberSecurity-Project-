@@ -3,3 +3,4 @@ venv-cyber
 CyberSecurity_Tools.egg-info
 logs-folder
 Artifacts
+mlruns

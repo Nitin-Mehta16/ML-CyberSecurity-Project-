@@ -72,10 +72,10 @@ class DataTransformation:
             train_data = np.c_[transformed_train_df, np.array(train_target_column)]
             test_data = np.c_[transformed_test_df, np.array(test_target_column)]
  
-            logging.info("savning tranformed data ")
+            logging.info("saving tranformed data ")
             save_numpy_array_data(self.data_transformation_config.transformed_train_file_path,array=train_data)
             save_numpy_array_data(self.data_transformation_config.transformed_test_file_path,test_data)
-            save_numpy_array_data(self.data_transformation_config.transformed_object_file_path,transformed_object)
+            save_object(self.data_transformation_config.transformed_object_file_path,transformed_object)
 
             logging.info("preparing artifact")
             data_transformation_artifact= DataTransformationArtifact(
