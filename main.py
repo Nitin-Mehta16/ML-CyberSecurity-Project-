@@ -1,7 +1,7 @@
 from NetworkSecurity.components.data_ingestion import DataIngestion
-from NetworkSecurity.entity.config_entity import DataIngestionConfig
-from NetworkSecurity.entity.config_entity import training_pipeline_config
-from NetworkSecurity.components.data_validation import DataValidation, DataValidationConfig
+from NetworkSecurity.entity.config_entity import training_pipeline_config, DataValidationConfig, DataTransformationConfig, DataIngestionConfig
+from NetworkSecurity.components.data_validation import DataValidation, DataValidationConfig,DataValidationArtifact
+from NetworkSecurity.components.data_transformation import DataTransformation
 
 from NetworkSecurity.exception.exception import CustomException
 from NetworkSecurity.logging.logger import logging
@@ -22,7 +22,14 @@ if __name__ == "__main__":
         data_validation_config=DataValidationConfig(training_pipeline_config)
         data_validation=DataValidation(DataIngestionArtifact,data_validation_config)
         logging.info("data_validation........")
-        data_validation = data_validation.initiate_data_validation()
-        print(data_validation)
+        data_validation_artifact = data_validation.initiate_data_validation()
+        print(data_validation_artifact)
+        logging.info("data_transformation........")
+        data_transformation_config= DataTransformationConfig(training_pipeline_config)
+        data_transformation=DataTransformation(data_validation_artifact,data_transformation_config)
+        data_transformation_artifact = data_transformation.intiate_data_transformation()
+        print(data_transformation_artifact)
+
+
     except Exception as e:
         raise CustomException(e,sys)
